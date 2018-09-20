@@ -12,13 +12,11 @@ response = requests.get(url)
 
 html = response.text
 
-# print(html)
 
 soup = bs(html,"lxml")
 
 tables = soup.findAll('div',attrs={'class':'eachStory'})
 
-#print(tables)
 
 records=[]
 
@@ -41,37 +39,3 @@ print(df)
 
 
 
-# table  = soup.find('div',attrs={'class':'all'})
-
-#print(table.contents[0].attrs.class)
-
-# for tag in table.findChildren():
-# 	#print(tag.attrs.get('class'))
-# 	if tag.attrs.get('class') is ['mktDiv']:
-# 		tag.clear()
-
-
-# table1 = table.children
-
-# if(table.findAll(id='BSEDiv')!=[] || table.findAll)
-
-# listR=[]
-# for row in table.findAll('tr'):
-# 	listC = []
-# 	for head in row.findAll('th'):
-# 		listC.append(head.text)
-# 	for col in row.findAll('td'):
-# 		listC.append(col.text)
-# 		# print(col.text)
-# 	listR.append(listC)
-# print(listR)
-
-# outfile  = open("premiertable.csv","w")
-
-# writer  = csv.writer(outfile)
-
-# # writer.writerows(['Pos',"Club","P","W",'D',"L","GD","Pts"])
-
-# writer.writerows(listR)
-
-# print(table.text)
